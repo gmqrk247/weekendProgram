@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400&family=Montserrat:wght@500&display=swap');
+
+:root {
+	--bg-color: rgb(54, 79, 107)
+		linear-gradient(71deg, rgba(54, 79, 107, 1) 0%, rgba(54, 121, 146, 1) 100%);
+	--text-color: #b1d5fcd7;
+	--link-bg-color: #220e24;
+	--link-text-color: #8ca1b7;
+}
+
+html {
+	background: var(--bg-color);
+	color: var(--text-color);
+	scroll-behavior: smooth;
+    line-height: 1.6;
+    
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Montserrat', sans-serif;
+}
+
+p,
+a {
+	font-family: 'Hind', sans-serif;
+    font-weight: 400;
+}
+
+/* Utility styles*/
+
+.container  {
+    max-width: 1100px;
+    padding: 0 1rem;
+    margin-inline: auto;
+}
+
+.line {
+    width: 85%;
+    height: 4px;
+    background-color: var(--link-text-color);
+    border-radius: 5px;
+    margin: 1rem auto 0;
+}
+
+ul {
+    list-style-type: '‣' ;
+    font-size: 25px;
+    border-right: 2px solid var(--text-color);
+    margin-top: 2.5rem;
+    text-align: left;
+}
+
+ul li {
+   padding-left: 12px;
+}
+.btn {
+    text-decoration: none;
+    border: none;
+    background: var(--link-bg-color);
+    color: var(--link-text-color);
+    border-radius: 5px;
+    padding: .7em 1em;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+
+.btn.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.day{
+    min-height: 100vh;
+}
+
+#sunday{
+    margin-top: 10rem;
+
+}
+
+.day-title {
+    text-align: center;
+    font-size: clamp(3rem, 4vw, 2rem);
+    margin-top: 2rem;
+}
+
+/*  Header Styles*/
+
+.main-header {
+    height: 100vh;
+}
+
+.main-header h1 {
+    text-align: center;
+    font-size: clamp(3.5rem, 4vw, 3rem);
+    margin-top: 4rem;
+}
+
+
+@media (max-width:500px) {
+    html {
+        line-height: 1.2;
+    }
+   .main-header h1 {
+    font-size: 2rem;
+    margin-top: 10rem;
+   } 
+
+   .btn-container {
+    flex-direction: column;
+    
+   }
+
+   .btn {
+    font-size: unset;
+   }
+
+   ul{font-size: 20px;border: none;}
+
+   ul li {
+    margin-top: .5rem;
+   }
+}
